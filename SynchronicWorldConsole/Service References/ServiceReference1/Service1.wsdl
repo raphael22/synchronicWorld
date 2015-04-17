@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65256/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:65256/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:65256/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_AddPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PersonRetrieve_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersonRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PersonRetrieve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersonRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PersonUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersonUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PersonUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersonUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PersonDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:PersonDelete" />
+  </wsdl:message>
+  <wsdl:message name="IService1_PersonDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PersonDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPersons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPersons" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllPersons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPersonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEvent" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventRetrieve_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventRetrieve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventDelete" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventExists" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventDateRetrieve_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventDateRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventDateRetrieve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventDateRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventTypeOrStatusRetrieve_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventTypeOrStatusRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventTypeOrStatusRetrieve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventTypeOrStatusRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventClosedDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventClosedDelete" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventClosedDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventClosedDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventPendingUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:EventPendingUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_EventPendingUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EventPendingUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEvents" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddContribution_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddContribution" />
+  </wsdl:message>
+  <wsdl:message name="IService1_AddContribution_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllContributions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContributions" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllContributions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllContributionsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="AddPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddPerson" message="tns:IService1_AddPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddPersonResponse" message="tns:IService1_AddPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonRetrieve">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PersonRetrieve" message="tns:IService1_PersonRetrieve_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PersonRetrieveResponse" message="tns:IService1_PersonRetrieve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PersonUpdate" message="tns:IService1_PersonUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PersonUpdateResponse" message="tns:IService1_PersonUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PersonDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/PersonDelete" message="tns:IService1_PersonDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/PersonDeleteResponse" message="tns:IService1_PersonDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPersons">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllPersons" message="tns:IService1_GetAllPersons_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllPersonsResponse" message="tns:IService1_GetAllPersons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddEvent" message="tns:IService1_AddEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddEventResponse" message="tns:IService1_AddEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventRetrieve">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EventRetrieve" message="tns:IService1_EventRetrieve_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EventRetrieveResponse" message="tns:IService1_EventRetrieve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EventUpdate" message="tns:IService1_EventUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EventUpdateResponse" message="tns:IService1_EventUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EventDelete" message="tns:IService1_EventDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EventDeleteResponse" message="tns:IService1_EventDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EventExists" message="tns:IService1_EventExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EventExistsResponse" message="tns:IService1_EventExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventDateRetrieve">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EventDateRetrieve" message="tns:IService1_EventDateRetrieve_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EventDateRetrieveResponse" message="tns:IService1_EventDateRetrieve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventTypeOrStatusRetrieve">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EventTypeOrStatusRetrieve" message="tns:IService1_EventTypeOrStatusRetrieve_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EventTypeOrStatusRetrieveResponse" message="tns:IService1_EventTypeOrStatusRetrieve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventClosedDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EventClosedDelete" message="tns:IService1_EventClosedDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EventClosedDeleteResponse" message="tns:IService1_EventClosedDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EventPendingUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/EventPendingUpdate" message="tns:IService1_EventPendingUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/EventPendingUpdateResponse" message="tns:IService1_EventPendingUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllEvents" message="tns:IService1_GetAllEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllEventsResponse" message="tns:IService1_GetAllEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddContribution">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/AddContribution" message="tns:IService1_AddContribution_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddContributionResponse" message="tns:IService1_AddContribution_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContributions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAllContributions" message="tns:IService1_GetAllContributions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAllContributionsResponse" message="tns:IService1_GetAllContributions_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddPerson">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonRetrieve">
+      <soap:operation soapAction="http://tempuri.org/IService1/PersonRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonUpdate">
+      <soap:operation soapAction="http://tempuri.org/IService1/PersonUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PersonDelete">
+      <soap:operation soapAction="http://tempuri.org/IService1/PersonDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPersons">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllPersons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEvent">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventRetrieve">
+      <soap:operation soapAction="http://tempuri.org/IService1/EventRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventUpdate">
+      <soap:operation soapAction="http://tempuri.org/IService1/EventUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventDelete">
+      <soap:operation soapAction="http://tempuri.org/IService1/EventDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventExists">
+      <soap:operation soapAction="http://tempuri.org/IService1/EventExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventDateRetrieve">
+      <soap:operation soapAction="http://tempuri.org/IService1/EventDateRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventTypeOrStatusRetrieve">
+      <soap:operation soapAction="http://tempuri.org/IService1/EventTypeOrStatusRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventClosedDelete">
+      <soap:operation soapAction="http://tempuri.org/IService1/EventClosedDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EventPendingUpdate">
+      <soap:operation soapAction="http://tempuri.org/IService1/EventPendingUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEvents">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddContribution">
+      <soap:operation soapAction="http://tempuri.org/IService1/AddContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllContributions">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetAllContributions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:65256/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
